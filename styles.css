@@ -1,0 +1,207 @@
+/* Style the website you made last week using CSS with the following requirements:
+Use only external CSS file (no internal or inline styling)
+Every element must be styled.
+Create style rules using class, id, and element selectors. */
+
+/* Pre define custome variables */
+:root {
+    /* --row-odd:#ea5753;
+    --row-even:#ffb88e;
+    --white: #ffffff;
+    --color-text: rgb(24, 129, 24);
+    --hover-color: rgb(24, 129, 120);
+    --dark-background: #ea5753;
+    --light-background: #ffb88e;
+    --color-background: linear-gradient(to right bottom, #ffb88e, #ea5753);
+    --color-list: rgba(234, 87, 83, 0.7); */
+
+    --row-odd:#ffbb98;
+    --row-even:#fbe0c3;
+    --white: #ffffff;
+    --color-text: #344648;
+    --hover-color: #7d8e95;
+    --dark-background: #ffbb98;
+    --light-background: #fbe0c3;
+    --color-background: linear-gradient(to right bottom, #fbe0c3, #ffbb98);
+    --color-list: #ffbb98;
+    --shadow-color: #ea5753;
+}
+body{
+    background-color:var(--light-background) ;
+    margin: auto;
+    max-width: 1200px;
+    
+}
+main{
+    margin-top: 125px;
+    text-align: center;
+}
+footer{
+    margin-top: 25px;
+}
+/* This is the style for the table to make each row a diferant color */
+tbody tr:nth-child(even) {
+    background-color: var(--row-even);
+    color: var(--color-text);
+}
+  tbody tr:nth-child(odd) {
+    background-color: var(--row-odd);
+    color: var(--color-text);
+}
+nav{
+    margin: auto;
+    
+    ul {
+        z-index: 1;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--dark-background);
+        border-radius: 3rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    li {
+        float: right;
+        
+    }
+      
+    li a {
+        display: block;
+        color:var(--color-text);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: var(--hover-color);
+        border-radius: 3rem;
+    }
+    
+    .logo{
+        float: left;
+        font-weight: bolder;
+        font-size: larger;
+    }
+    .logo a:hover{
+        background-color: var(--dark-background);
+    }
+}
+
+/* Here is the style for all of the article tags so my site looks uniform */
+article{
+    width: 85%;
+	padding: 3rem;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	position: relative;
+    align-self: center;
+	border-radius: 3rem;
+	background: var(--color-background);
+    text-align: center;
+
+	h1 {
+		top: 0;
+		margin: 0;
+		padding: 16px 0;
+		padding-top: 16px;
+		position: sticky;
+		text-align: center;
+		color: var(--color-text);
+		margin-bottom: 3rem;
+		box-shadow: 0 7px 2rem var(--shadow-color);
+		background: var(--dark-background);
+        border-radius: 3rem;
+	}
+    h3 {
+		top: 0;
+		margin: 0;
+		padding: 16px  0;
+		padding-top: 16px;
+		position: sticky;
+		text-align: center;
+		color: var(--color-text);
+		margin-bottom: 3rem;
+		box-shadow: 0 7px 2rem var(--shadow-color);
+		background: var(--dark-background);
+        border-radius: 3rem;
+	}
+}
+
+/* this is the style to for the list */
+.list {
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+ 	/* List */
+	ul {
+		margin: 0;
+		gap: 1rem;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		place-items: center;
+		flex-direction: column;
+		counter-reset: my-counter;
+
+		li {
+			width: 30rem;
+			text-align: center;
+			color: var(--color-text);
+			border-radius: 3rem;
+			background: var(--color-list);
+			counter-increment: my-counter;
+			padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+			&::before {
+				content: counter(my-counter) ". ";
+			}
+		}
+	}
+}
+/* This is the style for the comparsion part of my page */
+.comparison {
+    top: 10px;
+    table{
+        box-shadow: 0 7px 2rem var(--shadow-color);
+		background: var(--dark-background);
+        border-radius: 10px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tr {
+        text-align: center;
+
+    }
+    th:first-of-type {
+        border-top-left-radius: 10px;
+      }
+      th:last-of-type {
+        border-top-right-radius: 10px;
+      }
+      tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 10px;
+      }
+      tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 10px;
+      }
+}
+/* This is the style for my gallery to show the images more uniform */
+.gallery{
+    margin: 5px;
+    /* float: left; */
+    /* width: 180px; */
+    img:hover {
+    box-shadow: 0 7px 2rem var(--shadow-color);
+		background: var(--dark-background);
+    }
+
+    img {
+        width: 20%;
+        height: auto;
+        border-radius: 3rem;
+    }
+}

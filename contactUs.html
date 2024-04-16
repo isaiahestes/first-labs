@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- What is needed for week 1 asignment
+Create a website using only HTML. The website can be anything you like (within school guidelines) if it meets the following criteria:
+Create a homepage named index.html
+At least 3 pages with links to navigate between all pages present on each page.
+2 different size headers, a list, 3 images, a table, and a form. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Capybara</title>
+        <!-- below is the <nav> tag element which houses the navigation in my site. -->
+        <nav>
+            <ul>
+                <li class="logo"><a href="./index.html">Capybara</a></li>
+                <!-- These are the <a> tags are to create links to the other pages in my site -->
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contactUs.html">Contact Us</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <main>
+            <article class="contactUs">
+                <h3>Contact Form</h3>
+                <!-- This is form which allows us to collect data from the user -->
+                <form>
+                    <!-- The next 2 are text form fields. where we can collect text from the user. -->
+                    <div>
+                        <label for="fname">First name:</label>&nbsp;
+                        <input type="text" id="fname" name="fname"><br><br>
+                    </div>
+                    <div>
+                        <label for="lname">Last name:</label>&nbsp;
+                        <input type="text" id="lname" name="lname"><br><br>
+                    </div>
+                    <!-- This one is a single select option with multiple choice -->
+                    <div>
+                        <p>Choose Wisely!</p>
+                        <input type="radio" id="capybara" name="fav_rodent" value="capybara">
+                        <label for="capybara">Capybara</label><br>
+                        <input type="radio" id="mouse" name="fav_rodent" value="mouse">
+                        <label for="mouse">Mouse</label><br>
+                        <input type="radio" id="rat" name="fav_rodent" value="rat">
+                        <label for="rat">Rat</label>
+                    </div><br>
+                    <!-- This is the submit button which we could tie to a JS script -->
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </main>
+    </body>
+    <br>
+    <footer>
+        &copy;&nbsp;Capybara
+    </footer>
+</html>

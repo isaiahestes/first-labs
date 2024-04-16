@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- What is needed for week 1 asignment
+Create a website using only HTML. The website can be anything you like (within school guidelines) if it meets the following criteria:
+Create a homepage named index.html
+At least 3 pages with links to navigate between all pages present on each page.
+2 different size headers, a list, 3 images, a table, and a form. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+
+        <title>Capybara</title>
+        <!-- below is the <nav> tag element which houses the navigation in my site. -->            
+        <nav>
+            <ul>
+                <li class="logo"><a href="./index.html">Capybara</a></li>
+                <!-- These are the <a> tags are to create links to the other pages in my site -->
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contactUs.html">Contact Us</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <!-- Here is where we put the main content -->
+        <main>
+            <article class="list">
+                <h1>Mission</h1>
+                <h3> 
+                    Here at Capybara we pride ourselves on the very important life that we live!These things are the most important to us.
+                </h3>
+                <!-- This is a list with bullet points -->
+                <ul>
+                    <li>Chill Factor</li>
+                    <li>Cutness Factor</li>
+                    <li>Have a Cool Theme Song</li>
+                </ul>
+            </article>
+            <article class="comparison">
+                <h1>Comparison</h1>
+                <h3> The differences between us and our competitors are easy to see.</h3>
+                <!-- This is a table which allows me to put some data side by side -->
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Company</th>
+                        <th>Chill</th>
+                        <th>Cutness</th>
+                        <th>Theme Song</th>
+                        </tr>
+                        <tr>
+                        <td>Capybara Family Business</td>
+                        <td><img src="./images/checkMark.webp" alt="X" width="35" height="35"></td>
+                        <td><img src="./images/checkMark.webp" alt="X" width="35" height="35"></td>                  
+                        <td><img src="./images/checkMark.webp" alt="X" width="35" height="35"></td>
+                        </tr>
+                        <tr>
+                            <td>Mouse LLC</td>
+                            <td><img src="./images/x.jpg" alt="X" width="35" height="35"></td>
+                            <td><img src="./images/checkMark.webp" alt="X" width="35" height="35"></td>                  
+                            <td><img src="./images/x.jpg" alt="X" width="35" height="35"></td>
+                        </tr>
+                        <tr>
+                            <td>Rat Incorporated</td>
+                            <td><img src="./images/x.jpg" alt="X" width="35" height="35"></td>
+                            <td><img src="./images/x.jpg" alt="X" width="35" height="35"></td>                  
+                            <td><img src="./images/x.jpg" alt="X" width="35" height="35"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </main>
+    </body>
+    <!-- this is a footer where i have our copyright -->
+    <footer>
+        &copy;&nbsp;Capybara
+    </footer>
+</html>
